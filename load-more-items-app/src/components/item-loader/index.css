@@ -1,0 +1,25 @@
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  width: 300px;
+  border: 1px solid #000;
+  height: 560spx;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: grey;
+}
+
+.card-container:hover {
+  background-color: aliceblue;
+  width: 310px;
+  cursor: pointer;
+}
+
+.price-tag {
+  font-weight: bolder;
+}
