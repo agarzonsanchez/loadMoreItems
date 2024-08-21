@@ -18,10 +18,14 @@ export default function LoadMoreItems({ url }) {
     }
   }
 
-  function handleMoreItems() {
+  function handleMoreItems(e) {
     if (moreItem < 100) {
       setMoreItems(moreItem + 20);
     }
+  }
+
+  function handleRestar() {
+    setMoreItems(20);
   }
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export default function LoadMoreItems({ url }) {
                 <img
                   src={item.images}
                   alt={item.title}
-                  style={{ width: "300px" }}
+                  style={{ width: "150px" }}
                 />
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>
@@ -46,7 +50,12 @@ export default function LoadMoreItems({ url }) {
             ))
           : null}
       </div>
-      <button onClick={handleMoreItems}>Load More Items</button>
+      <button onClick={handleMoreItems} className="button-load">
+        Load More Items
+      </button>
+      <button onClick={handleRestar} className="button-load">
+        Restart
+      </button>
     </div>
   );
 }

@@ -2,24 +2,42 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card-container {
   width: 300px;
-  border: 1px solid #000;
-  height: 560spx;
+  height: 400px;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background-color: grey;
+  background-color: #023e73;
+  color: white;
 }
 
 .card-container:hover {
-  background-color: aliceblue;
-  width: 310px;
+  transition: 1s;
+  background-color: #023e73;
+  box-shadow: 5px 5px 0 #590212;
   cursor: pointer;
 }
 
 .price-tag {
   font-weight: bolder;
+}
+
+.button-load {
+  background-color: #590212;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.button-load:hover {
+  cursor: pointer;
+  color: #590212;
+  background-color: #fff;
 }
