@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 export default function LoadMoreItems({ url }) {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
-  const [moreItem, setMoreItems] = useState(0);
+  const [moreItem, setMoreItems] = useState(20);
   async function fetchDataItems() {
     try {
       setLoading(true);
 
-      const response = await fetch(`${url}?limit=20&skip=${moreItem}`);
+      const response = await fetch(`${url}?limit=${moreItem}`);
       const dataItem = await response.json();
       console.log(dataItem);
       setProducts(dataItem.products);
@@ -19,7 +19,9 @@ export default function LoadMoreItems({ url }) {
   }
 
   function handleMoreItems() {
-    setMoreItems(moreItem + 20);
+    if (moreItem < 100) {
+      setMoreItems(moreItem + 20);
+    }
   }
 
   useEffect(() => {
