@@ -34,12 +34,15 @@ export default function LoadMoreItems({ url }) {
   if (loading) return <h1>Loading... Please wait!</h1>;
   return (
     <div>
+      <div>
+        <h1 className="app-title">Load More Item App</h1>
+      </div>
       <div className="card-wrapper">
         {products && products.length > 0
           ? products.map((item) => (
-              <div className="card-container">
+              <div key={item.id} className="card-container">
                 <img
-                  src={item.images}
+                  src={item.thumbnail}
                   alt={item.title}
                   style={{ width: "150px" }}
                 />

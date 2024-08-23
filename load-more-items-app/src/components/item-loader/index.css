@@ -3,6 +3,7 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .card-container {
@@ -11,14 +12,14 @@
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
-  background-color: #023e73;
-  color: white;
+  background-color: #ffffff;
+  color: #2f365f;
 }
 
 .card-container:hover {
-  transition: 1s;
-  background-color: #023e73;
-  box-shadow: 5px 5px 0 #590212;
+  transition: 0.5s;
+  background-color: #f7f1ed;
+  box-shadow: 5px 5px 5px 0 #3d5a5b;
   cursor: pointer;
 }
 
@@ -27,7 +28,7 @@
 }
 
 .button-load {
-  background-color: #590212;
+  background-color: #3d5a5b;
   color: #fff;
   padding: 10px;
   border: none;
@@ -38,6 +39,11 @@
 
 .button-load:hover {
   cursor: pointer;
-  color: #590212;
-  background-color: #fff;
+  color: #3d5a5b;
+  background-color: #ffffff;
+}
+
+.app-title {
+  color: 2f365f;
+  padding: 20px;
 }
